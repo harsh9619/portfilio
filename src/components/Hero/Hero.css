@@ -1,0 +1,264 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+}
+
+.orb1 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, #6d4fc2, transparent);
+  top: -200px;
+  left: -150px;
+  animation: drift1 9s ease-in-out infinite alternate;
+}
+
+.orb2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #22d3ee, transparent);
+  bottom: -100px;
+  right: -80px;
+  animation: drift2 11s ease-in-out infinite alternate;
+}
+
+.orb3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #b87fff, transparent);
+  top: 50%;
+  left: 50%;
+  opacity: 0.08;
+  animation: drift1 14s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes drift1 {
+  to {
+    transform: translate(50px, 40px);
+  }
+}
+
+@keyframes drift2 {
+  to {
+    transform: translate(-40px, -50px);
+  }
+}
+
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 1;
+  padding-top: 110px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.22);
+  border-radius: 100px;
+  padding: 7px 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #4ade80;
+  margin-bottom: 30px;
+  animation: fadeUp 0.5s ease both;
+}
+
+.badge-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+  }
+}
+
+.hero-name {
+  font-size: clamp(70px, 12vw, 130px);
+  font-weight: 800;
+  line-height: 0.88;
+  color: var(--heading);
+  letter-spacing: -3px;
+  margin-bottom: 18px;
+  animation: fadeUp 0.55s ease 0.08s both;
+}
+
+.name-outline {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.25);
+  color: transparent;
+}
+
+.name-dot {
+  color: var(--accent2);
+}
+
+.hero-role {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted2);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  animation: fadeUp 0.55s ease 0.16s both;
+}
+
+.role-bracket {
+  color: var(--accent2);
+  margin: 0 4px;
+}
+
+.hero-sub {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 540px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.55s ease 0.24s both;
+}
+
+.hero-sub em {
+  color: var(--text);
+  font-style: normal;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+  animation: fadeUp 0.55s ease 0.32s both;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.55s ease 0.4s both;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-n {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1;
+}
+
+.stat-l {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+
+.stat-div {
+  width: 1px;
+  height: 44px;
+  background: var(--border2);
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.35;
+}
+
+.scroll-bar {
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(to bottom, var(--accent2), transparent);
+  animation: scrollBar 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollBar {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  51% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.scroll-hint span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .hero-stats {
+    gap: 18px;
+  }
+
+  .stat-n {
+    font-size: 28px;
+  }
+
+  .stat-div {
+    height: 32px;
+  }
+}
