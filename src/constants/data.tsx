@@ -1,0 +1,136 @@
+import { calculateDuration, calculateTotalExperience } from '../utils/index';
+
+
+
+export const jobs = [
+  {
+    role: 'Software Development Engineer III',
+    company: 'LeadSchool — Leadership Boulevard Pvt Ltd',
+    period: 'Feb 2018 – Present',
+    duration: calculateDuration('Feb 2018 – Present'),
+    current: true,
+    desc: 'Leading development of school EdTech platforms. Built and maintained the Nucleus ERP and DELTA Content Platform — covering microservices, REST APIs, and full-stack features. Drove the Angular-to-React migration and established AWS-based CI/CD pipelines.',
+    tech: ['NestJS','React','Angular','PostgreSQL','MongoDB','AWS','Docker','Redis','Node.js'],
+  },
+  {
+    role: 'Mobile Application Developer',
+    company: 'Techbizbuzz Technologies LLP · Deloitte India',
+    period: 'Jan 2016 – Jan 2018',
+    duration: calculateDuration('Jan 2016 – Jan 2018'),
+    current: false,
+    desc: 'Built cross-platform hybrid mobile applications for enterprise clients including Deloitte India. Developed an agriculture workflow system (P_AMS) and a compliance tracking app (Salaam Mumbai) with SAP backend integrations.',
+    tech: ['Angular','Ionic','Cordova','Node.js','Express','SAP Integration','REST APIs'],
+  },
+  {
+    role: 'Lab Assistant',
+    company: 'Atharva College of Engineering (Govt. Aided)',
+    period: 'Jun 2013 – Dec 2015',
+    duration: calculateDuration('Jun 2013 – Dec 2015'),
+    current: false,
+    desc: 'Supported computer lab operations and assisted students with programming coursework, practical sessions, and IT assignments during the B.Sc. IT programme.',
+    tech: ['Teaching','IT Support','Lab Management'],
+  },
+];
+
+export const info = [
+  { label: 'Location', value: 'Virar(W), Mumbai, India' },
+  { label: 'Email', value: 'harsh.shukla90@gmail.com', href: 'mailto:harsh.shukla90@gmail.com' },
+  { label: 'Phone', value: '+91 8976922131', href: 'tel:+918976922131' },
+  { label: 'Education', value: 'B.Sc. IT — Mumbai University' },
+  { label: 'Experience', value: '13+ Years' },
+  { label: 'Open To', value: 'Sr. Engineer / Lead / SDE III' },
+]
+
+export const totalExperience = calculateTotalExperience(jobs);
+
+export const projects = [
+  {
+    name: 'Nucleus — School ERP',
+    org: 'LeadSchool',
+    category: 'Web ERP Platform',
+    emoji: '🏫',
+    color: '#6d4fc2',
+    featured: true,
+    desc: 'A comprehensive school EdTech platform covering admissions, class/subject allocations, curriculum management, assessments, report cards, teacher management, and performance monitoring. Led the full Angular-to-React migration.',
+    tech: ['NestJS','React','Angular','PostgreSQL','MongoDB','AWS','Docker','Redis','AntD','Tailwind'],
+    highlights: ['Angular → React Migration','School Digitalization','Multi-tenant ERP','CI/CD on AWS'],
+  },
+  {
+    name: 'DELTA Content Platform',
+    org: 'LeadSchool',
+    category: 'Web ERP App',
+    emoji: '📚',
+    color: '#22d3ee',
+    featured: true,
+    desc: 'Responsive curriculum platform for seamless NCERT and multi-board content access for teachers and students. Features an integrated media player, document viewer, and PDF viewer for multi-format content consumption.',
+    tech: ['NestJS','React','Angular','AWS','MongoDB','PostgreSQL','Docker','AntD','Tailwind'],
+    highlights: ['Multi-board Content','Media Integration','Cross-device','PDF Viewer'],
+  },
+  {
+    name: 'P_AMS',
+    org: 'Techbizbuzz LLP',
+    category: 'Hybrid Mobile App',
+    emoji: '🌾',
+    color: '#4ade80',
+    featured: false,
+    desc: 'Agriculture workflow system providing step-by-step guidance for field preparation, planting, and harvesting. Includes hierarchical process management and time-based scheduling for crop lifecycle management.',
+    tech: ['Angular','Ionic','Cordova','Node.js','Express','SAP Integration'],
+    highlights: ['Cross-platform','SAP Backend','Crop Lifecycle','Scheduling'],
+  },
+  {
+    name: 'Salaam Mumbai',
+    org: 'Techbizbuzz LLP',
+    category: 'Hybrid Mobile App',
+    emoji: '🏙️',
+    color: '#fb923c',
+    featured: false,
+    desc: 'Dynamic questionnaire app with conditional Yes/No flow for compliance tracking. Features document upload for evidence validation and time-based logic to lock responses and re-prompt unanswered questions.',
+    tech: ['Angular','Ionic','Node.js','Express','REST APIs'],
+    highlights: ['Conditional Logic','Document Upload','Compliance Tracking','Time-locking'],
+  },
+  {
+    name: 'PO/PR Approvals App ',
+    org: 'Techbizbuzz LLP',
+    category: 'Hybrid Mobile App',
+    emoji: '🏙️',
+    color: '#fb923c',
+    featured: false,
+    desc: 'Real-time field data for smarter supply chain control. PO tracking delivers procurement solutions on the go. SAP integration ensures instant visibility into pending orders.',
+    tech: ['Angular','Ionic','REST APIs'],
+    highlights: ['Conditional Logic','Document Upload','Compliance Tracking','Time-locking'],
+  },
+  {
+    name: 'P_AMS App',
+    org: 'Techbizbuzz LLP',
+    category: 'Hybrid Mobile App',
+    emoji: '🏙️',
+    color: '#fb923c',
+    featured: false,
+    desc: 'PAMS (Precision Agriculture Management System) is built for the Agriculture mission. It provides step-by-step instructions and a systematic timeline for field preparation, planting, watering, fertilizing, and harvesting, ensuring a structured and efficient farming process.',
+    tech: ['Angular','Ionic','REST APIs'],
+    highlights: ['Conditional Logic','Document Upload','Compliance Tracking','Time-locking'],
+  },
+  {
+    name: 'TankUp App',
+    org: 'Techbizbuzz LLP',
+    category: 'Hybrid Mobile App',
+    emoji: '🏙️',
+    color: '#fb923c',
+    featured: false,
+    desc: 'TankUp Application using  for fuel delivered at user location. order placed from app  can track order and manage user account details.',
+    tech: ['Angular','Ionic','REST APIs'],
+    highlights: ['Conditional Logic','Document Upload','Compliance Tracking','Time-locking'],
+  },
+   {
+    name: 'AITM App',
+    org: 'Techbizbuzz LLP',
+    category: 'Hybrid Mobile App',
+    emoji: '🏙️',
+    color: '#fb923c',
+    featured: false,
+    desc: 'AITM App used for manage student data like Attendances, Academic Syllabus, student performance and show notice for activity/events.',
+    tech: ['Angular','Ionic','REST APIs'],
+    highlights: ['Conditional Logic','Document Upload','Compliance Tracking','Time-locking'],
+  }
+]
+

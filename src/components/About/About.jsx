@@ -1,11 +1,13 @@
 import './About.css'
+import { totalExperience } from '../../constants/data';
+
 
 const info = [
   { label: 'Location', value: 'Virar(W), Mumbai, India' },
   { label: 'Email', value: 'harsh.shukla90@gmail.com', href: 'mailto:harsh.shukla90@gmail.com' },
   { label: 'Phone', value: '+91 8976922131', href: 'tel:+918976922131' },
   { label: 'Education', value: 'B.Sc. IT — Mumbai University' },
-  { label: 'Experience', value: '13+ Years' },
+  { label: 'Experience', value: `${totalExperience} Years` },
   { label: 'Open To', value: 'Sr. Engineer / Lead / SDE III' },
 ]
 
@@ -19,7 +21,7 @@ export default function About() {
             <h2 className="section-title">About Me</h2>
             <p className="about-p">
               I'm a <strong>Software Development Engineer III</strong> based in Mumbai with over
-              13 years of experience building scalable platforms, microservices, and mobile applications.
+              {totalExperience} years of experience building scalable platforms, microservices, and mobile applications.
             </p>
             <p className="about-p">
               Currently at <strong>LeadSchool (Leadership Boulevard Pvt Ltd)</strong>, I lead

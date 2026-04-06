@@ -1,4 +1,7 @@
 import './Hero.css'
+import { totalExperience, projects, jobs } from '../../constants/data';
+import { calculateDuration, calculateTotalExperience } from '../../utils/index';
+
 
 export default function Hero() {
   return (
@@ -28,7 +31,7 @@ export default function Hero() {
         </p>
 
         <p className="hero-sub">
-          13+ years building <em>scalable microservices</em>, <em>full-stack web apps</em>
+          {totalExperience} years building <em>scalable microservices</em>, <em>full-stack web apps</em>
           {' '}& <em>hybrid mobile applications</em> — from database design to pixel-perfect UIs.
         </p>
 
@@ -39,9 +42,9 @@ export default function Hero() {
 
         <div className="hero-stats">
           {[
-            { n: '13+', l: 'Years Experience' },
-            { n: '8+', l: 'Major Projects' },
-            { n: '8+', l: 'Years at LeadSchool' },
+            { n: `${totalExperience}`, l: 'Years Experience' },
+            { n: `${projects.length}+`, l: 'Major Projects' },
+            { n: `${calculateTotalExperience(jobs, jobs[0].period)}`, l: 'Years at LeadSchool' },
           ].map((s, i) => (
             <>
               {i > 0 && <div key={`d-${i}`} className="stat-div" />}
