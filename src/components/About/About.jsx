@@ -55,7 +55,7 @@ export default function About() {
               ))}
             </div>
             <div className="socials">
-              <a href="https://www.linkedin.com/in/harsh-shukla-94060a8" target="_blank" rel="noreferrer" className="social-btn">
+              <a href="https://www.linkedin.com/in/harsh-shukla-94060a89/" target="_blank" rel="noreferrer" className="social-btn">
                 <LinkedInIcon /> LinkedIn
               </a>
               <a href="https://github.com/harsh9619" target="_blank" rel="noreferrer" className="social-btn">
