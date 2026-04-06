@@ -25,9 +25,9 @@ export default function Contact() {
               you have a role in mind, a project to discuss, or just want to connect
               — reach out anytime.
             </p>
-            <a href="mailto:harsh.shukla90@gmail.com" className="btn-primary contact-cta">
+            {/* <a href="mailto:harsh.shukla90@gmail.com" className="btn-primary contact-cta">
               Say Hello <span className="cta-arrow">→</span>
-            </a>
+            </a> */}
           </div>
 
           <div className="contact-cards">

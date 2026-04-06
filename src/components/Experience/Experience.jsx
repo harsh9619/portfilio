@@ -1,11 +1,33 @@
 import './Experience.css'
 
+function calculateDuration(period) {
+  const [startStr, endStr] = period.split(' – ');
+
+  const startDate = new Date(startStr);
+  const endDate = endStr.toLowerCase() === 'present' ? new Date() : new Date(endStr);
+
+  let years = endDate.getFullYear() - startDate.getFullYear();
+  let months = endDate.getMonth() - startDate.getMonth();
+
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  let duration = '';
+  if (years > 0) duration += `${years} Yr${years > 1 ? 's' : ''} `;
+  if (months > 0) duration += `${months} Mo${months > 1 ? 's' : ''}`;
+
+  return duration.trim();
+}
+
+
 const jobs = [
   {
     role: 'Software Development Engineer III',
     company: 'LeadSchool — Leadership Boulevard Pvt Ltd',
     period: 'Feb 2018 – Present',
-    duration: '8 Yrs 3 Mos',
+    duration: calculateDuration('Feb 2018 – Present'),
     current: true,
     desc: 'Leading development of school EdTech platforms. Built and maintained the Nucleus ERP and DELTA Content Platform — covering microservices, REST APIs, and full-stack features. Drove the Angular-to-React migration and established AWS-based CI/CD pipelines.',
     tech: ['NestJS','React','Angular','PostgreSQL','MongoDB','AWS','Docker','Redis','Node.js'],
@@ -14,7 +36,7 @@ const jobs = [
     role: 'Mobile Application Developer',
     company: 'Techbizbuzz Technologies LLP · Deloitte India',
     period: 'Jan 2016 – Jan 2018',
-    duration: '2 Yrs 1 Mo',
+    duration: calculateDuration('Jan 2016 – Jan 2018'),
     current: false,
     desc: 'Built cross-platform hybrid mobile applications for enterprise clients including Deloitte India. Developed an agriculture workflow system (P_AMS) and a compliance tracking app (Salaam Mumbai) with SAP backend integrations.',
     tech: ['Angular','Ionic','Cordova','Node.js','Express','SAP Integration','REST APIs'],
@@ -22,8 +44,8 @@ const jobs = [
   {
     role: 'Lab Assistant',
     company: 'Atharva College of Engineering (Govt. Aided)',
-    period: 'Jun 2013 – Dec 2016',
-    duration: '3 Yrs 6 Mos',
+    period: 'Jun 2013 – Dec 2015',
+    duration: calculateDuration('Jun 2013 – Dec 2015'),
     current: false,
     desc: 'Supported computer lab operations and assisted students with programming coursework, practical sessions, and IT assignments during the B.Sc. IT programme.',
     tech: ['Teaching','IT Support','Lab Management'],

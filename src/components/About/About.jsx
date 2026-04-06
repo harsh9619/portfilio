@@ -32,7 +32,10 @@ export default function About() {
               cross-device compatibility.
             </p>
             <div className="about-tags">
-              {['Available for Work', 'Sr. Engineer', 'Lead Roles', 'SDE III'].map(t => (
+              {[
+                // 'Available for Work',
+                 'Sr. Engineer',
+                  'Lead Roles', 'SDE III'].map(t => (
                 <span key={t} className="chip">{t}</span>
               ))}
             </div>

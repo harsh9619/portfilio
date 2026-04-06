@@ -28,7 +28,7 @@ export default function Navbar() {
         <ul className="nav-links">
           {links.map(l => <li key={l.href}><a href={l.href}>{l.label}</a></li>)}
         </ul>
-        <a href="mailto:harsh.shukla90@gmail.com" className="nav-cta">Hire Me</a>
+        {/* <a href="mailto:harsh.shukla90@gmail.com" className="nav-cta">Hire Me</a> */}
         {/* <div className="nav-right">
           <ThemeToggle />
         </div> */}

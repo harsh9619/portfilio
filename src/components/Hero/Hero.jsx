@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="hero-stats">
           {[
             { n: '13+', l: 'Years Experience' },
-            { n: '4+', l: 'Major Projects' },
+            { n: '8+', l: 'Major Projects' },
             { n: '8+', l: 'Years at LeadSchool' },
           ].map((s, i) => (
             <>
